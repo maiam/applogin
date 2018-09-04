@@ -1,17 +1,89 @@
-<div class="row" name="row1">
-  <div class="col">
+<!-- home.html -->
+<!-- Header Area wrapper Starts -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">MaiaMonteiro</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <!-- Section Hero -->
-    <section id="home">
-      <div class="jumbotron">
-        <h1 class="display-4">Agenda de Contatos</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Continuar</a>
-      </div>
-    </section>
-    <!-- Fim da section Hero -->
-
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input ng-model="filtro" class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </div>
-</div>
+</nav>
+<!-- Navbar End -->
+
+<!-- Section home -->
+<section id="home">
+  <div class="row" name="row1">
+    <div class="col">
+      <div class="jumbotron m-0">
+        <div class="container">
+          <h1 class="display-4">Contatos</h1>
+          <p class="lead"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Fim Section home -->
+<!-- Section table-contatos -->
+<section class="jumbotron m-0 bg-light" id="table-contatos">
+  <div class="row" name="row2">
+    <div class="col">
+      <div class="container">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <tr>
+              <th>NOME</th>
+            </tr>
+            <tr ng-repeat="contato in contatos | filter: filtro">
+              <td>
+                <a ng-href="#/contato/{{contato._id}}">{{contato.nome}}</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="container">
+        <a ng-href="#!/contatos" type="button" class="btn btn-primary">
+          Novo Contato
+          </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Fim Section table-contatos -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <section id="footer">
+    <div class="row" name="row-footer">
+      <div class="col">
+        <div class="container">
+          <span>
+          <p class="m-0 text-justify text-white" style="display: inline">Designed and built by </p>
+          <a href="#" class="m-0 text-justify text-white bold" style="display: inline">@maiam</a>
+          <p class="m-0 text-justify text-white" style="display: inline">.</p>
+        </span>
+          <p class="m-0 text-justify text-white">Currently v1.0.0. Code licensed MIT.</p>
+        </div>
+        <!-- /.container -->
+      </div>
+    </div>
+  </section>
+</footer>
+<!-- Fim footer -->

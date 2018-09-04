@@ -1,0 +1,72 @@
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+      Novo Contato
+    </button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Novo Contato</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+      </div>
+      <div class="modal-body">
+
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="inputNome4">Nome</label>
+              <input type="text" class="form-control" id="inputNome4" placeholder="Nome" required>
+              </div>
+            <div class="form-group col-md-12">
+              <label for="inputEmail4">Email</label>
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+              </div>
+            <div class="form-group col-md-6">
+              <label for="inputTelefone4">Telefone</label>
+              <input type="text" class="form-control" id="inputTelefone4" placeholder="Telefone" required>
+              </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="inputAddress">Endereço</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              </div>
+            <div class="form-group col-md-12">
+              <label for="inputAddress2">Endereço 2</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputCity">Cidade</label>
+              <input type="text" class="form-control" id="inputCity">
+              </div>
+            <div class="form-group col-md-6">
+              <label for="inputState">Estado</label>
+              <select id="inputState" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>Rio de Janeiro</option>
+                  <option>São Paulo</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputZip">Cep</label>
+              <input type="text" class="form-control" id="inputZip">
+              </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Fim de modal -->
